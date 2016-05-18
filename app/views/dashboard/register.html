@@ -1,0 +1,145 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Rekisteröityminen
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <h1 class="heading-xlarge">
+    {% if serviceName %} {{ serviceName }} {% endif %}
+  </h1>
+
+  <h1 class="heading-large">
+    Rekisteröityminen
+  </h1>
+
+    <!--
+    <pre>
+      Tekstikoko:  Pienennä  Suurenna Tulosta:  Print Korkea kontrasti:  Korkea kontrasti På svenska  bullet In English
+
+      Helsingin kaupungin sähköisen asioinnin rekisteriseloste
+      Rekisteröidy		Keskeytä
+
+      Sivun ylläpito: Kaupunginkanslia | Ohjeet | Tietoa palvelusta | Palaute | Rekisteriseloste |
+      © Helsingin kaupunki, p. (09) 310 1691, www.hel.fi
+    </pre>
+    -->
+
+
+    <h2 class="heading-medium">
+      Omat tiedot
+    </h1>
+
+    <p>
+      Sinut on nyt rekisteröity asiointi.hel.fi -palvelun käyttäjäksi.
+    </p>
+    <p>
+      Voit katsoa ja muokata käyttäjätietojasi "Omat tiedot" -osiossa.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">Omat tiedot</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Nimi</td>
+          <td>Matti Pentti-Heikki Rantala</td>
+        </tr>
+        <tr>
+          <td>Henkilötunnus</td>
+          <td>241242-1007</td>
+        </tr>
+        <tr>
+         <td>Sähköpostiosoite</td>
+          <td>user@example.com</td>
+        </tr>
+        <tr>
+         <td>Matkapuhelinnumero</td>
+          <td>+358 00 000 0000</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+    <form action="/" method="post" class="form">
+
+      <h1 class="form-title heading-large">
+        Omat tiedot
+      </h1>
+
+      <p>
+        Tällä lomakkeella voit rekisteröityä Helsingin kaupungin sähköisten palveluiden käyttäjäksi.<br>
+        Henkilötiedot on saatu väestötietojärjestelmästä.
+      </p>
+
+
+      <!-- Full name -->
+      <div class="form-group">
+        <label class="form-label-bold" for="full-name">Koko nimi</label>
+        <p class="form-hint">Kuten näkyvissä henkilötodisteessasi, passissasi tai syntymätodistuksessasi.</p>
+        <input type="text" class="form-control" id="full-name">
+      </div>
+
+
+      <!-- Date of birth -->
+      <div class="form-group">
+        <fieldset>
+          <legend class="form-label-bold">Syntymäaika</legend>
+
+          <div class="form-date">
+
+            <p class="form-hint">Esimerkiksi: 31 3 1980</p>
+
+            <div class="form-group form-group-day">
+              <label for="dob-day">Päivä</label>
+              <input class="form-control" id="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+            </div>
+
+            <div class="form-group form-group-month">
+              <label for="dob-month">Kuu</label>
+              <input class="form-control" id="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+            </div>
+
+            <div class="form-group form-group-year">
+              <label for="dob-year">Vuosi</label>
+              <input class="form-control" id="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <div class="form-group">
+        <details>
+          <summary><span class="summary">Help with date of birth</span></summary>
+          <div class="panel panel-border-narrow">
+            <p>
+              If you don’t know your exact date of birth, use the one you put on official documents (for example, your passport or driving licence).
+            </p>
+            <p>
+              If you can’t provide your date of birth you’ll have to send copies of identity documents through the post.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div class="form-group">
+        <input type="submit" class="button" value="Jatka palveluun">
+      </div>
+
+    </form>
+
+
+
+</main>
+
+{% endblock %}
