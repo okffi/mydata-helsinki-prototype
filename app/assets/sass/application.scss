@@ -1,3 +1,4 @@
+// =============================================================================
 // Import GOV.UK elements, this will import the frontend toolkit and some base styles.
 // Take a look in _govuk-elements.scss to see which files are imported.
 @import 'govuk-elements';
@@ -5,6 +6,8 @@
 // Take a look at patterns.scss to see which files are imported.
 @import 'patterns';
 
+
+// =============================================================================
 // If you need to create a page as part of your journey, but without GOV.UK branding
 // See localhost:3000/examples/unbranded/
 .unbranded {
@@ -20,6 +23,7 @@
   }
 }
 
+// =============================================================================
 // Related items
 // (These styles will be moved to GOV.UK elements, duplicating here for now.)
 .govuk-related-items {
@@ -38,4 +42,45 @@
   }
 }
 
-// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+// =============================================================================
+// Add extra styles here,
+// or re-organise the Sass files in whichever way makes most sense to you
+// =============================================================================
+
+
+// =============================================================================
+// MyData content section
+.mydata-section {
+  margin-top: 20px;
+  //margin-bottom: 40px;
+  border-top: 12px solid #eee;
+
+  > h2 {
+    margin-top: 12px;
+  }
+}
+
+
+// MyData content sub-section
+.mydata-subsection {
+  margin-top: 20px;
+  //margin-bottom: 40px;
+  border-top: 6px solid #eee;
+
+  > h2 {
+    margin-top: 12px;
+  }
+}
+
+
+
+
+
+// =============================================================================
+// MyData account in the list
+.mydata-account {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  border-top: 6px solid #cbc;
+}

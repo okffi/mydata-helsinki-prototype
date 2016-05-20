@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Omat tiedot
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <h1 class="heading-xlarge">
+    <!-- {% if serviceName %} {{ serviceName }} {% endif %} -->
+    Kirjastokortti
+  </h1>
+
+    <h2 class="heading-medium">
+      Omat tiedot
+    </h1>
+
+    <p>
+      Sinut on nyt rekisteröity asiointi.hel.fi -palvelun käyttäjäksi.
+    </p>
+    <p>
+      Voit katsoa ja muokata käyttäjätietojasi "Omat tiedot" -osiossa.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">Kirjastokortti</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Nimi</td>
+          <td>Matti Pentti Rantala</td>
+        </tr>
+        <tr>
+          <td>Kirjastokortin numero:</td>
+          <td>2 0000 02000 0000</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+</main>
+
+{% endblock %}

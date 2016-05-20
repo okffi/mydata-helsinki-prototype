@@ -1,0 +1,213 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  3. Palvelujen linkittäminen
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <h1 class="heading-xlarge">
+    <!-- {% if serviceName %} {{ serviceName }} {% endif %} -->
+    3. Palvelujen linkittäminen
+  </h1>
+
+  <pre>
+    3A. Uusien datalähteiden lisääminen
+    3B Lukijaprofiilin jakaminen eri palveluiden kanssa
+  </pre>
+
+
+  <div class="mydata-section">
+
+    <h2 class="heading-large">
+      Discovery
+    </h2>
+
+    <div class="grid-row  mydata-subsection">
+
+      <div class="column-one-third">
+        <h3 class="heading-small">
+          Sources (Datalähteet)
+        </h3>
+        <pre>
+          1. HelMet kirjastokortti
+          2. Goodreads
+          3. Amazon.com (U.S.)
+        </pre>
+
+      </div>
+
+      <div class="column-one-third">
+        <h3 class="heading-small">
+          Header
+        </h3>
+        <p>Content</p>
+      </div>
+
+      <div class="column-one-third">
+        <h3 class="heading-small">
+          Header
+        </h3>
+        <p>Content</p>
+      </div>
+
+    </div> <!-- .grid-row ends -->
+  </div> <!-- .mydata-section ends -->
+
+
+
+
+
+<h1 class="heading-large">Yksittäisen palvelun infosivut</h1>
+
+    <div class="mydata-section">
+
+      <h2 class="heading-medium">
+        Omat käyttäjätunnukset
+      </h1>
+
+      <div class="grid-row">
+
+        <div class="column-one-third">
+          <p>
+            Sinut on rekisteröity asiointi.hel.fi -palvelun käyttäjäksi.
+          </p>
+          <p>
+            Voit muokata käyttäjätietojasi "Omat tiedot" -osiossa.
+          </p>
+        </div>
+
+        <div class="column-two-thirds">
+
+          <!-- Kirjastokortti -->
+          <table class="mydata-account">
+            <thead>
+              <tr>
+                <th colspan="2"><a href="http://www.helmet.fi/fi-FI/Info/Asiakkaana_kirjastossa/Kirjastokortti_ja_lainaaminen(37)">HelMet kirjastokortti</a></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Nimi</td>
+                <td>Matti Pentti Rantala</td>
+              </tr>
+              <tr>
+                <td>Kirjastokortin numero:</td>
+                <td>2 0000 02000 0000</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+          <!-- Kirjastokortti #2 -->
+          <table class="mydata-account">
+            <thead>
+              <tr>
+                <th colspan="2"><a href="http://www.jyvaskyla.fi/kirjasto/asiointi/kirjastokortti">Jyväskylän kaupunginkirjasto</a></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Nimi</td>
+                <td>Matti Pentti Rantala</td>
+              </tr>
+              <tr>
+                <td>Kirjastokortin numero:</td>
+                <td>1 0300 02150 0204</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+          <table class="mydata-account">
+            <thead>
+              <tr>
+                <th colspan="2"><a href="https://tunnus.yle.fi/koti">Yle Tunnus</a></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Käyttäjätunnus:</td>
+                <td>user@example.com</td>
+              </tr>
+              <tr>
+                <td><a href="http://yle.fi/aihe/yleisradio/yle-tunnus-rekisteriseloste">Rekisteriseloste</a></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+
+
+          <table class="mydata-account">
+            <thead>
+              <tr>
+                <th colspan="2"><a href="https://www.goodreads.com/">Goodreads</a></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Käyttäjänimi</td>
+                <td>Matti Rantala</td>
+              </tr>
+              <tr>
+                <td>Käyttäjätunnus:</td>
+                <td>user@example.com</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+          <table class="mydata-account">
+            <thead>
+              <tr>
+                <th colspan="2"><a href="http://www.amazon.com/">Amazon.com</a> (U.S.)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Käyttäjänimi</td>
+                <td>Matti Rantala</td>
+              </tr>
+              <tr>
+                <td>Käyttäjätunnus:</td>
+                <td>user@example.com</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+          <table class="mydata-account">
+            <thead>
+              <tr>
+                <th colspan="2"><a href="http://www.akateeminen.com/fi/kanta-asiakkaat/">Akateeminen Kirjakauppa</a></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Käyttäjänimi</td>
+                <td>Matti Rantala</td>
+              </tr>
+              <tr>
+                <td>Käyttäjätunnus:</td>
+                <td>user@example.com</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+      </div> <!-- .mydata-section ends -->
+
+
+    </div> <!-- .grid-row ends -->
+
+
+
+
+
+
+</main>
+
+{% endblock %}
