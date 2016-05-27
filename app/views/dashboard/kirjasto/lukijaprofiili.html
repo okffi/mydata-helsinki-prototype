@@ -1,0 +1,150 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+1A. Lukijaprofiili
+{% endblock %}
+
+{% block proposition_header %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+
+{% block content %}
+
+<main id="content" role="main">
+
+  {% include "includes/phase_banner_alpha.html" %}
+
+  <div class="breadcrumbs">
+    <ol>
+      {% include "includes/breadcrumb_kirjasto-items.html" %}
+      <li>1. Etusivu</li>
+    </ol>
+  </div>
+
+  <h1 class="heading-xlarge">
+    <!-- {% if serviceName %} {{ serviceName }} {% endif %} -->
+    1A. Lukijaprofiili
+  </h1>
+  <p class="lede">
+    Koostemuodossa yksi näkymä joka kertoo että “tällainen sinä olet lukijana”
+  </p>
+
+  <div class="mydata-section">
+
+    <div class="grid-row  mydata-subsection">
+
+      <div class="column-one-half">
+        <h4 class="heading-medium">
+          Profiili
+        </h3>
+
+
+        <h4 class="heading-small">Aihepiirit</h3>
+        <p>Aihepiirit asiasanalistana</p>
+
+        <h4 class="heading-small">Tilastot</h3>
+        <p>...</p>
+
+        <h4 class="heading-small">Kirjailijat</h3>
+        <p>Kirjailijat, joiden kirjoja lukenut paljon</p>
+
+      </div>
+
+      <div class="column-one-half">
+        <h3 class="heading-medium">
+          Suositukset
+        </h3>
+        <p>1B. Profiilin pohjalta tehdyt suositukset</p>
+      </div>
+
+    </div>
+    <!-- .grid-row ends -->
+  </div>
+  <!-- .mydata-section ends -->
+
+
+
+  <div class="mydata-section">
+
+    <h2 class="heading-medium">
+      Omat merkinnät
+    </h2>
+
+    <p class="lede">
+      A 24px lead paragraph, maecenas sed diam.
+    </p>
+
+    <div class="grid-row  mydata-subsection">
+
+      <div class="column-one-half  mix-bgcolor-2">
+        <h3 class="heading-small">
+          Suosikkikirja
+        </h3>
+        <p>...</p>
+      </div>
+
+      <div class="column-one-half  mix-bgcolor-2">
+        <h3 class="heading-small">
+          Wishlist
+        </h3>
+        <p>...</p>
+      </div>
+
+    </div>
+    <!-- .grid-row ends -->
+  </div>
+  <!-- .mydata-section ends -->
+
+
+
+
+
+  <div class="mydata-section">
+
+    <h2 class="heading-medium">
+      Analyysi
+    </h2>
+
+    <p class="lede">
+      A 24px lead paragraph, maecenas sed diam.
+    </p>
+
+
+    <div class="grid-row ">
+
+      <div class="column-one-third mydata-subsection">
+        <h3 class="heading-small">
+          Aihepiirit
+        </h3>
+        <p>Aihepiirit asiasanalistana</p>
+      </div>
+
+      <div class="column-one-third mydata-subsection">
+        <h3 class="heading-small">
+          Tilastot
+        </h3>
+        <p>...</p>
+      </div>
+
+      <div class="column-one-third mydata-subsection">
+        <h3 class="heading-small">
+          Kirjailijat
+        </h3>
+        <p>Kirjailijat, joiden kirjoja lukenut paljon</p>
+      </div>
+
+    </div>
+    <!-- .grid-row ends -->
+  </div>
+  <!-- .mydata-section ends -->
+
+
+
+</main>
+
+{% endblock %}

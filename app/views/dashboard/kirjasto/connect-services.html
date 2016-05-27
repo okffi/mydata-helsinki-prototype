@@ -4,9 +4,28 @@
   3. Palvelujen linkittäminen
 {% endblock %}
 
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+
 {% block content %}
 
 <main id="content" role="main">
+
+  {% include "includes/phase_banner_alpha.html" %}
+
+  <div class="breadcrumbs">
+    <ol>
+      {% include "includes/breadcrumb_kirjasto-items.html" %}
+      <li>Palvelujen linkittäminen</li>
+    </ol>
+  </div>
+
 
   <h1 class="heading-xlarge">
     <!-- {% if serviceName %} {{ serviceName }} {% endif %} -->
@@ -17,6 +36,28 @@
     3A. Uusien datalähteiden lisääminen
     3B Lukijaprofiilin jakaminen eri palveluiden kanssa
   </pre>
+
+  <p>
+    <img src="/public/images/icons/serviceRoleSource.png" alt="Data Source icon" />
+    <img src="/public/images/icons/serviceRoleSink.png" alt="Data Receiver icon" />
+  </p>
+
+
+  <div class="mydata-section">
+
+    <h2 class="heading-medium">
+      <a href="/dashboard/kirjasto/connect-services">Palvelujen linkittäminen</a>
+    </h2>
+
+    <p class="lede">
+      Esittelyteksti osiolle.
+    </p>
+
+    {% include "includes/kirjasto-discovery-3columns.html" %}
+
+  </div>
+
+
 
 
   <div class="mydata-section">
@@ -36,12 +77,11 @@
           2. Goodreads
           3. Amazon.com (U.S.)
         </pre>
-
       </div>
 
       <div class="column-one-third">
         <h3 class="heading-small">
-          Header
+          Lähde + hyödyntäjä
         </h3>
         <p>Content</p>
       </div>
@@ -54,6 +94,9 @@
       </div>
 
     </div> <!-- .grid-row ends -->
+
+
+
   </div> <!-- .mydata-section ends -->
 
 
@@ -85,7 +128,7 @@
           <table class="mydata-account">
             <thead>
               <tr>
-                <th colspan="2"><a href="http://www.helmet.fi/fi-FI/Info/Asiakkaana_kirjastossa/Kirjastokortti_ja_lainaaminen(37)">HelMet kirjastokortti</a></th>
+                <th colspan="2"><i class="fa fa-user" aria-hidden="true"></i> <a href="http://www.helmet.fi/fi-FI/Info/Asiakkaana_kirjastossa/Kirjastokortti_ja_lainaaminen(37)">HelMet kirjastokortti</a></th>
               </tr>
             </thead>
             <tbody>
@@ -105,7 +148,7 @@
           <table class="mydata-account">
             <thead>
               <tr>
-                <th colspan="2"><a href="http://www.jyvaskyla.fi/kirjasto/asiointi/kirjastokortti">Jyväskylän kaupunginkirjasto</a></th>
+                <th colspan="2"><i class="fa fa-user" aria-hidden="true"></i> <a href="http://www.jyvaskyla.fi/kirjasto/asiointi/kirjastokortti">Jyväskylän kaupunginkirjasto</a></th>
               </tr>
             </thead>
             <tbody>
@@ -124,7 +167,7 @@
           <table class="mydata-account">
             <thead>
               <tr>
-                <th colspan="2"><a href="https://tunnus.yle.fi/koti">Yle Tunnus</a></th>
+                <th colspan="2"><i class="fa fa-user" aria-hidden="true"></i> <a href="https://tunnus.yle.fi/koti">Yle Tunnus</a></th>
               </tr>
             </thead>
             <tbody>
@@ -143,7 +186,7 @@
           <table class="mydata-account">
             <thead>
               <tr>
-                <th colspan="2"><a href="https://www.goodreads.com/">Goodreads</a></th>
+                <th colspan="2"><i class="fa fa-user" aria-hidden="true"></i> <a href="https://www.goodreads.com/">Goodreads</a></th>
               </tr>
             </thead>
             <tbody>
@@ -162,7 +205,7 @@
           <table class="mydata-account">
             <thead>
               <tr>
-                <th colspan="2"><a href="http://www.amazon.com/">Amazon.com</a> (U.S.)</th>
+                <th colspan="2"><i class="fa fa-amazon" aria-hidden="true"></i> <a href="http://www.amazon.com/">Amazon.com</a> (U.S.)</th>
               </tr>
             </thead>
             <tbody>
@@ -181,7 +224,7 @@
           <table class="mydata-account">
             <thead>
               <tr>
-                <th colspan="2"><a href="http://www.akateeminen.com/fi/kanta-asiakkaat/">Akateeminen Kirjakauppa</a></th>
+                <th colspan="2"><i class="fa fa-user" aria-hidden="true"></i> <a href="http://www.akateeminen.com/fi/kanta-asiakkaat/">Akateeminen Kirjakauppa</a></th>
               </tr>
             </thead>
             <tbody>

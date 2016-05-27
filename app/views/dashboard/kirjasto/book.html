@@ -4,14 +4,42 @@
   Kirjan infosivu
 {% endblock %}
 
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+
 {% block content %}
 
 <main id="content" role="main">
 
-  <h1 class="heading-xlarge">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  <div class="breadcrumbs">
+    <ol>
+      {% include "includes/breadcrumb_kirjasto-items.html" %}
+      <li>Kirjan infosivu</li>
+    </ol>
+  </div>
+
+
+  <h1 id="bookTitle" class="bookTitle" itemprop="name">
     <!-- {% if serviceName %} {{ serviceName }} {% endif %} -->
-    Kirjan infosivu
+    The One-Minute Organizer Plain &amp; Simple: 500 Tips for Getting Your Life in Order
   </h1>
+
+  <div id="bookAuthors" class="bookAuthors stacked">
+    <span class="by smallText">by</span>
+    <span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <a class="authorName" itemprop="url" href="https://www.goodreads.com/author/show/351186.Donna_Smallin_Kuper">
+        <span itemprop="name">Donna Smallin Kuper</span>
+    </a>
+    </span>
+  </div>
 
 
   <div class="mydata-section">
@@ -20,31 +48,75 @@
       Kirjan perustiedot
     </h2>
 
-    <div class="grid-row  mydata-subsection">
+    <div class="grid-row">
 
-      <div class="column-one-third">
+      <div class="column-one-third  mydata-subsection">
         <h3 class="heading-small">
-          Header
+          Cover
         </h3>
-        <p>Content</p>
+        <img src="/public/images/books/799191-book-cover.jpg" alt="Book cover image" />
       </div>
 
-      <div class="column-one-third">
+      <div class="column-one-third  mydata-subsection">
         <h3 class="heading-small">
-          Header
+          Description
         </h3>
-        <p>Content</p>
+        <div id="description">
+          <p>
+            Bring order to your hectic life, quickly and efficiently. Donna Smallin offers innovative ideas and effective solutions to the busy person’s daily battle with both physical and mental clutter. This easy-to-follow guide includes 500 strategies that will
+            help you make your world a more orderly place so that you can spend more time enjoying the things that really matter. Even if you don’t have time for a top-to-bottom organizational makeover, you can still unclutter your life&hellip; one short
+            minute at a time.
+            <a href="#" class="description-moretext">Read more…</a>
+          </p>
+        </div>
+
       </div>
 
-      <div class="column-one-third">
+      <div class="column-one-third  mydata-subsection">
         <h3 class="heading-small">
-          Header
+          Details
         </h3>
-        <p>Content</p>
+
+        <p>
+          <span itemprop="bookFormatType">Paperback</span>,
+          <span itemprop="numberOfPages">256 pages</span>
+        </p>
+
+        <p>
+          Published September 15th 2004 by Storey Publishing, LLC
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th colspan="2">Dates and amounts</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Original Title</td>
+              <td>The One-Minute Organizer Plain &amp; Simple</td>
+            </tr>
+            <tr>
+              <td>ISBN</td>
+              <td>
+                1580175848 <br>
+                <span class="greyText">(ISBN13: <span itemprop="isbn">9781580175845</span>)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Edition Language</td>
+              <td itemprop="inLanguage">English</td>
+            </tr>
+          </tbody>
+        </table>
+
       </div>
 
-    </div> <!-- .grid-row ends -->
-  </div> <!-- .mydata-section ends -->
+    </div>
+    <!-- .grid-row ends -->
+  </div>
+  <!-- .mydata-section ends -->
 
 
   <div class="mydata-section">
@@ -57,27 +129,52 @@
 
       <div class="column-one-third">
         <h3 class="heading-small">
-          Lainaushistoria
+          Genres
         </h3>
-        <p>...</p>
+
+        <ul class="list list-bullet">
+          <li>
+            <a class="bookPageGenreLink" href="/dashboard/kirjasto/genres/non-fiction">Nonfiction</a>
+          </li>
+          <li>
+            <a class="bookPageGenreLink" href="/dashboard/kirjasto/genres/self-help">Self Help</a>
+          </li>
+          <li>
+            <a class="bookPageGenreLink" href="/dashboard/kirjasto/genres/psychology">Psychology</a>
+          </li>
+          <li>
+            <a class="bookPageGenreLink" href="/dashboard/kirjasto/genres/how-to">How To</a>
+          </li>
+        </ul>
+
       </div>
+
 
       <div class="column-one-third">
         <h3 class="heading-small">
-          Lukuhistoria
+          Header
         </h3>
         <p>...</p>
       </div>
+
 
       <div class="column-one-third">
         <h3 class="heading-small">
-          Ostohistoria
+          See this at:
         </h3>
-        <p>...</p>
+        <ul class="list">
+           <li><a href="https://www.goodreads.com/book/show/799191.The_One_Minute_Organizer_Plain_Simple">Goodreads</a></li>
+           <li><a href="http://www.amazon.com/gp/product/1580175848/">Amazon</a></li>
+           <li><a href="http://haku.helmet.fi/iii/encore/record/C__Rb1826938__SThe%20one-minute%20organizer%20plain%20%26%20simple__Orightresult__U__X3?lang=fin&suite=cobalt">HelMet –kirjasto</a></li>
+           <li><a href="http://www.worldcat.org/title/one-minute-organizer-plain-simple/oclc/55744125?loc=">WorldCat.org</a></li>
+           <li><a href="#" class="bold-xsmall">More</a></li>
+         </ul>
       </div>
 
-    </div> <!-- .grid-row ends -->
-  </div> <!-- .mydata-section ends -->
+    </div>
+    <!-- .grid-row ends -->
+  </div>
+  <!-- .mydata-section ends -->
 
 
   <div class="mydata-section">
@@ -90,57 +187,28 @@
 
       <div class="column-one-half">
         <h3 class="heading-small">
-          Suosikkikirja
+          Bookmarks
         </h3>
         <p>...</p>
       </div>
 
       <div class="column-one-half">
         <h3 class="heading-small">
-          Wishlist
+          Highlights
         </h3>
         <p>...</p>
       </div>
 
-    </div> <!-- .grid-row ends -->
-  </div> <!-- .mydata-section ends -->
+    </div>
+    <!-- .grid-row ends -->
+  </div>
+  <!-- .mydata-section ends -->
 
 
 
 
 
-  <div class="mydata-section">
 
-    <h2 class="heading-medium">
-      Analyysi
-    </h2>
-
-
-    <div class="grid-row ">
-
-      <div class="column-one-third mydata-subsection">
-        <h3 class="heading-small">
-          Aihepiirit
-        </h3>
-        <p>Aihepiirit asiasanalistana</p>
-      </div>
-
-      <div class="column-one-third mydata-subsection">
-        <h3 class="heading-small">
-          Tilastot
-        </h3>
-        <p>...</p>
-      </div>
-
-      <div class="column-one-third mydata-subsection">
-        <h3 class="heading-small">
-          Kirjailijat
-        </h3>
-        <p>Kirjailijat, joiden kirjoja lukenut paljon</p>
-      </div>
-
-    </div> <!-- .grid-row ends -->
-  </div> <!-- .mydata-section ends -->
 
 
 

@@ -4,9 +4,27 @@
   Omat tiedot
 {% endblock %}
 
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+
+
 {% block content %}
 
 <main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  <div class="breadcrumbs">
+    <ol>
+      {% include "includes/breadcrumb_kirjasto-items.html" %}
+      <li>Kirjastokortti</li>
+    </ol>
+  </div>
 
   <h1 class="heading-xlarge">
     <!-- {% if serviceName %} {{ serviceName }} {% endif %} -->

@@ -7,6 +7,14 @@
 @import 'patterns';
 
 
+
+// =============================================================================
+// Import custom elements for the MixLibris site
+@import 'mixlibris-timeline';
+
+
+
+
 // =============================================================================
 // If you need to create a page as part of your journey, but without GOV.UK branding
 // See localhost:3000/examples/unbranded/
@@ -48,29 +56,87 @@
 // or re-organise the Sass files in whichever way makes most sense to you
 // =============================================================================
 
+// Maximum width of an image should not overlap the upstream container size.
+img {
+  max-width: 100%;
+}
+
+
+
+// =============================================================================
+// MixLibris logo replacement
+
+#global-header #logo {
+  float: left;
+  position: relative;
+  top: -1px;
+  height: 30px;
+  overflow: visible;
+  vertical-align: baseline;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 1em;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  margin-bottom: -3px;
+  padding-top: 2px;
+  border-bottom: 1px solid transparent;
+  background: url('../images/MixLibris-logo-M@1x.png?0.17.1') no-repeat;
+  background-size: 35px 31px;
+  background-position: 0 0; }
+  #global-header #logo img {
+    position: relative;
+    top: -2px;
+    width: 35px;
+    height: 31px;
+    padding-right: 6px;
+    float: left;
+    display: inline;
+    line-height: inherit;
+    border: none;
+    visibility: hidden; }
+  #global-header #logo:hover, #global-header #logo:focus {
+    text-decoration: none;
+    border-bottom-color: white; }
+
+
 
 // =============================================================================
 // MyData content section
 .mydata-section {
-  margin-top: 20px;
+  margin-top: 30px;
   //margin-bottom: 40px;
-  border-top: 12px solid #eee;
+  //border-top: 12px solid #eee;
 
   > h2 {
     margin-top: 12px;
+    margin-bottom: 5px;
+  }
+
+  > .lede {
+    color: #423409;
   }
 }
 
 
 // MyData content sub-section
 .mydata-subsection {
-  margin-top: 20px;
+  margin-top: 10px;
   //margin-bottom: 40px;
   border-top: 6px solid #eee;
 
   > h2 {
     margin-top: 12px;
   }
+
+  // > div {
+  //   border: 1px solid #eee;
+  //   border-top-color: #ccc;
+  //   border-bottom-color: #ccc;
+  //   border-bottom-width: 3px;
+  //   border-left-color: #ddd;
+  // }
 }
 
 
@@ -84,3 +150,125 @@
   margin-bottom: 40px;
   border-top: 6px solid #cbc;
 }
+
+
+
+
+
+// =============================================================================
+// Book title
+//
+// Example in use: http://localhost:3000/dashboard/kirjasto/book
+
+.bookTitle {
+  @extend .heading-xlarge;
+  margin-top: 0.25em;
+  margin-bottom: 0.4em;
+}
+
+.bookAuthors {
+  @extend .lede;
+  margin-top: 0.2em;
+  margin-bottom: 0.4em;
+}
+
+
+
+// =============================================================================
+// Link - More text (Read more)
+
+.description-moretext {
+  // Add a linebreak before item.
+  // Source: http://stackoverflow.com/questions/4609279/css-to-line-break-before-after-a-particular-inline-block-item
+  &:before { content:"\A"; white-space:pre; }
+}
+
+
+
+
+
+
+// =============================================================================
+// List item without list icon
+
+.nobullet {
+  list-style-type: none !important;
+}
+
+
+
+
+
+
+
+
+
+// =============================================================================
+// Background color generator
+//
+// From:
+// http://stackoverflow.com/questions/23446965/color-themes-with-sass-mixins/23447247
+
+@mixin theme($name, $bgColor, $textColor) {
+  .#{$name}{
+    .content {
+        background: $bgColor;
+        color: $textColor;
+    }
+  }
+}
+
+// @include theme("odd", 'blue', 'white');
+
+
+
+
+
+
+// =============================================================================
+// Colors
+
+
+
+// =============================================================================
+// Background color generator
+//
+// Usage:
+//    bgcolor("name", 'color');
+//
+// Produces:
+//    .mix-bgcolor-NAME {
+//      background-color: COLOR;
+//    }
+
+@mixin bgcolor($name, $bgColor) {
+  .mix-bgcolor-#{$name}{
+    background-color: $bgColor;
+  }
+}
+
+
+// Produces:
+//    .mix-bgcolor-1
+//    .mix-bgcolor-2
+//    .mix-bgcolor-3
+//    .mix-bgcolor-4
+//    ...
+
+@include bgcolor('1', #fffbee);
+@include bgcolor('2', #fff6e9);
+@include bgcolor('3', #efefef);
+@include bgcolor('4', #D1DDE6);
+
+
+
+
+
+
+
+
+
+
+
+
+// =============================================================================

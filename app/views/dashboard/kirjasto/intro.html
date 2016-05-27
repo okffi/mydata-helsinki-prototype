@@ -1,12 +1,32 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Omat tiedot
+1. Etusivu
 {% endblock %}
+
+{% block proposition_header %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
 
 {% block content %}
 
 <main id="content" role="main">
+
+  {% include "includes/phase_banner_alpha.html" %}
+
+  <div class="breadcrumbs">
+    <ol>
+      {% include "includes/breadcrumb_kirjasto-items.html" %}
+      <li>1. Etusivu</li>
+    </ol>
+  </div>
+
+
 
   <h1 class="heading-xlarge">
     <!-- {% if serviceName %} {{ serviceName }} {% endif %} -->
@@ -14,157 +34,187 @@
     <!--Kirjasto-kojelauta-->
   </h1>
 
-  <h2 class="heading-large">
-    Tervetuloa
-  </h2>
+
+  <ul class="list list-bullet">
+    {% include "includes/navigation-kirjasto.html" %}
+  </ul>
 
 
-  <div class="mydata-section">
+  <div class="column-one-half  mydata-section" style="margin-top: 50px;">
 
-    <h2 class="heading-medium">
-      Lukijaprofiili
+    <h2 class="heading-large">
+      Lukuhistoria
+    </h2>
+
+    <!-- <p class="lede">
+      A 24px lead paragraph, maecenas sed diam.
+    </p> -->
+
+
+    <div class="timeline">
+      <h2>2013</h2>
+
+      <ul>
+        <li>
+          <div class="grid-row">
+            <div class="column-one-third">
+              <img src="/public/images/books/799191-book-cover.jpg" alt="Book cover image" />
+            </div>
+            <div class="column-two-thirds">
+              <h3 class="heading-small"><a href="/dashboard/kirjasto/book">The One-Minute Organizer Plain &amp; Simple: 500 Tips for Getting Your Life in Order</a></h3>
+              <time>August 2013</time>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="grid-row">
+            <div class="column-one-third">
+              <img src="/public/images/books/Auster-Paul-New-York-trilogia.jpg" alt="Book cover image" />
+            </div>
+            <div class="column-two-thirds">
+              <h3 class="heading-small"><a href="http://www.kirjasampo.fi/fi/kulsa/saha3%253Au3c7d63bd-97e2-40b6-9ae1-555efc05c1b2">New York-trilogia</a></h3>
+              <time>July 2013</time>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="grid-row">
+            <div class="column-one-third">
+              <img src="/public/images/books/22320-William-Gibson-Pattern-recognition.jpg" alt="Book cover image" />
+            </div>
+            <div class="column-two-thirds">
+              <h3 class="heading-small"><a href="#">Pattern recognition</a></h3>
+              <time>July 2013</time>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <h2>2012</h2>
+      <ul>
+        <li>
+          <div class="grid-row">
+            <div class="column-one-third">
+              <img src="/public/images/books/24019187-humans-of-new-york.jpg" alt="Book cover image" />
+            </div>
+            <div class="column-two-thirds">
+              <h3 class="heading-small"><a href="#">Humans of New York: Stories</a></h3>
+              <time>July 2013</time>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="grid-row">
+            <div class="column-one-third">
+              <img src="/public/images/books/7546430-neuromancer.jpg" alt="Book cover image" />
+            </div>
+            <div class="column-two-thirds">
+              <h3 class="heading-small"><a href="#">Neuromancer</a></h3>
+              <time>July 2013</time>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="grid-row">
+            <div class="column-one-third">
+              <img src="/public/images/books/313998-Johnny_Mnemonic.jpg" alt="Book cover image" />
+            </div>
+            <div class="column-two-thirds">
+              <h3 class="heading-small"><a href="#">Johnny Mnemonic</a></h3>
+              <time>July 2013</time>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <h2>2011</h2>
+      <ul>
+        <li>
+          <div class="grid-row">
+            <div class="column-one-third">
+              <img src="/public/images/books/24693032-the-dogist.jpg" alt="Book cover image" />
+            </div>
+            <div class="column-two-thirds">
+              <h3 class="heading-small"><a href="#">The Dogist: Photographic Encounters with 1,000 Dogs</a></h3>
+              <time>July 2013</time>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="grid-row">
+            <div class="column-one-third">
+              <img src="/public/images/books/8576760-creative-inc.jpg" alt="Book cover image" />
+            </div>
+            <div class="column-two-thirds">
+              <h3 class="heading-small"><a href="#">Creative, Inc.: The Ultimate Guide to Running a Successful Freelance Business</a></h3>
+              <time>July 2013</time>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="grid-row">
+            <div class="column-one-third">
+              <img src="/public/images/books/13593553-to-sell-is-human.jpg" alt="Book cover image" />
+            </div>
+            <div class="column-two-thirds">
+              <h3 class="heading-small"><a href="#">To Sell Is Human: The Surprising Truth About Moving Others</a></h3>
+              <time>July 2013</time>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+  <!-- .mydata-section ends -->
+
+
+  <div class="column-one-half  mydata-section" style="margin-top: 50px;">
+    <h2 class="heading-large">
+      <a href="/dashboard/kirjasto/lukijaprofiili">1A. Lukijaprofiili</a>
     </h2>
 
     <p class="lede">
-      A 24px lead paragraph, maecenas sed diam.
+      Esittelyteksti osiolle.
     </p>
 
-    Palvelujen linkittäminen
-
-    <div class="grid-row  mydata-subsection">
-
-      <div class="column-one-third">
-        <h3 class="heading-small">
-          Header
-        </h3>
-        <p>Content</p>
-      </div>
-
-      <div class="column-one-third">
-        <h3 class="heading-small">
-          Header
-        </h3>
-        <p>Content</p>
-      </div>
-
-      <div class="column-one-third">
-        <h3 class="heading-small">
-          Header
-        </h3>
-        <p>Content</p>
-      </div>
-
-    </div> <!-- .grid-row ends -->
-  </div> <!-- .mydata-section ends -->
-
-
-  <div class="mydata-section">
-
-    <h2 class="heading-medium">
-      Historia
-    </h2>
-
-    <p class="lede">
-      A 24px lead paragraph, maecenas sed diam.
-    </p>
-
-    <div class="grid-row  mydata-subsection">
-
-      <div class="column-one-third">
-        <h3 class="heading-small">
-          Lainaushistoria
-        </h3>
-        <p>...</p>
-      </div>
-
-      <div class="column-one-third">
-        <h3 class="heading-small">
-          Lukuhistoria
-        </h3>
-        <p>...</p>
-      </div>
-
-      <div class="column-one-third">
-        <h3 class="heading-small">
-          Ostohistoria
-        </h3>
-        <p>...</p>
-      </div>
-
-    </div> <!-- .grid-row ends -->
-  </div> <!-- .mydata-section ends -->
-
-
-  <div class="mydata-section">
-
-    <h2 class="heading-medium">
-      Omat merkinnät
-    </h2>
-
-    <p class="lede">
-      A 24px lead paragraph, maecenas sed diam.
-    </p>
-
-    <div class="grid-row  mydata-subsection">
+    <div class="grid-row">
 
       <div class="column-one-half">
-        <h3 class="heading-small">
-          Suosikkikirja
+        <h3 class="heading-medium">
+          Profiili
         </h3>
-        <p>...</p>
+        <h4 class="heading-small">Aihepiirit</h3>
+        <h4 class="heading-small">Tilastot</h3>
+        <h4 class="heading-small">Kirjailijat</h3>
       </div>
 
       <div class="column-one-half">
-        <h3 class="heading-small">
-          Wishlist
+        <h3 class="heading-medium">
+          Suositukset
         </h3>
-        <p>...</p>
+        <p>1B. Profiilin pohjalta tehdyt suositukset</p>
       </div>
 
-    </div> <!-- .grid-row ends -->
-  </div> <!-- .mydata-section ends -->
-
-
+    </div>
+    <!-- .grid-row ends -->
+  </div>
+  <!-- .mydata-section ends -->
 
 
 
   <div class="mydata-section">
 
-    <h2 class="heading-medium">
-      Analyysi
+    <h2 class="heading-large">
+      <a href="/dashboard/kirjasto/connect-services">Palvelujen linkittäminen</a>
     </h2>
 
     <p class="lede">
-      A 24px lead paragraph, maecenas sed diam.
+      Esittelyteksti osiolle.
     </p>
 
-
-    <div class="grid-row ">
-
-      <div class="column-one-third mydata-subsection">
-        <h3 class="heading-small">
-          Aihepiirit
-        </h3>
-        <p>Aihepiirit asiasanalistana</p>
-      </div>
-
-      <div class="column-one-third mydata-subsection">
-        <h3 class="heading-small">
-          Tilastot
-        </h3>
-        <p>...</p>
-      </div>
-
-      <div class="column-one-third mydata-subsection">
-        <h3 class="heading-small">
-          Kirjailijat
-        </h3>
-        <p>Kirjailijat, joiden kirjoja lukenut paljon</p>
-      </div>
-
-    </div> <!-- .grid-row ends -->
-  </div> <!-- .mydata-section ends -->
-
+  </div>
+  <!-- .mydata-section ends -->
 
 
 

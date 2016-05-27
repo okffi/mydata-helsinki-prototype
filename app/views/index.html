@@ -1,12 +1,29 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  GOV.UK prototype kit
+  Prototype kit
 {% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
 
 {% block content %}
 
 <main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol>
+      <li>Home</li>
+    </ol>
+  </div>
+
+
   <div class="grid-row">
     <div class="column-two-thirds">
 
@@ -17,7 +34,7 @@
       </p>
 
       <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
+        This kit lets you rapidly create HTML prototypes of MixLibris services.
       </p>
 
       <p>
@@ -35,6 +52,7 @@
           <li>
             <a href="/dashboard/kirjasto">Kirjasto</a>
           </li>
+          {% include "includes/navigation-kirjasto.html" %}
         </ul>
       </ul>
 

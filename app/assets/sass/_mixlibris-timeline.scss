@@ -1,0 +1,127 @@
+// MixLibris timeline
+// Responsive HTML Timeline
+//
+// Based on the example from:
+//    http://codepen.io/jplhomer/pen/lgfus?editors=1100
+
+// =============================================================================
+//@import "compass/css3";
+
+
+// =============================================================================
+// Color palette
+$color-gray: #f1f1f1;
+$color-gray2: #ddd;
+
+
+// =============================================================================
+// Headers
+h1,
+h2,
+h3 {
+  font-weight: 300;
+}
+
+
+
+.timeline {
+  position: relative;
+  overflow: auto;
+
+  &:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    background: $color-gray;
+    left: 0;
+  }
+
+  h2 {
+    background: $color-gray2;
+    max-width: 6em;
+    margin: 0 auto 1em;
+    padding: 0.5em;
+    text-align: center;
+    position: relative;
+    clear: both;
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #888;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0 0 0 1em;
+    z-index: 1;
+  }
+
+  li {
+    background: $color-gray;
+    padding: 1em;
+    margin-bottom: 1em;
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-top: 1em solid $color-gray;
+      border-left: 1em solid transparent;
+      position: absolute;
+      left: -1em;
+      top: 0;
+    }
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+
+  time {
+    font-style: italic;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .timeline {
+    &:before {
+      left: 50%;
+    }
+
+    ul {
+      padding-left: 0;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    li {
+      width: 42%;
+    }
+
+    li:nth-child(even) {
+      float: right;
+      margin-top: 2em;
+    }
+
+    li:nth-child(odd) {
+      float: left;
+
+      &:before {
+        border-top: 1em solid $color-gray;
+        border-right: 1em solid transparent;
+        right: -1em;
+        left: auto;
+      }
+    }
+
+    li:nth-of-type(2n+1) {
+      clear: both;
+    }
+  }
+}
