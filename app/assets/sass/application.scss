@@ -154,6 +154,76 @@ img {
 
 
 
+// =============================================================================
+// MyData account in the list
+.mydata-navbox {
+  border-top: 6px solid #5f7dbb;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  padding: 20px;
+
+  // Minimum height for the container
+  min-height: 280px;
+
+
+  // Inset shadow made with http://www.cssmatic.com/box-shadow
+  -webkit-box-shadow: inset 0px 0px 20px 0px rgba(176,176,176,0.4);
+  -moz-box-shadow: inset 0px 0px 20px 0px rgba(176,176,176,0.4);
+  box-shadow: inset 0px 0px 20px 0px rgba(176,176,176,0.4);
+
+
+  // Content will be aligned to left, unless specified other elsewhere
+  text-align: left;
+}
+
+
+.mydata-navbox-header {
+  // Reverse the margins for the content header element
+  margin: -20px;
+  margin-bottom: 20px;
+
+  // Add padding so that the element contents are aligned to the grid.
+  padding: 10px 20px;
+
+  // Center content
+  text-align: center;
+
+
+  // Change text color to improve accessibility
+  color: #222;
+
+  // Change link text color to improve accessibility
+  a {
+    color: #222;
+  }
+
+  // Add whitespace to the top of service icon
+  i {
+    margin-top: 15px;
+  }
+}
+
+
+
+// =============================================================================
+// Button: Connect service
+
+.button-connection {
+  background-color: #3b67a0;
+}
+
+.button-connection--active {
+  background-color: #00823b;
+}
+
+.button-connection--error {
+  background-color: #d44600;
+}
+
+
+
+
+
 
 // =============================================================================
 // Book title
@@ -265,6 +335,60 @@ img {
 
 
 
+// =============================================================================
+// Gradient styles
+//
+// Generated with:
+//    http://www.cssmatic.com/gradient-generator#'\-moz\-linear\-gradient\%28top\%2C\%20rgba\%28134\%2C174\%2C204\%2C1\%29\%200\%25\%2C\%20rgba\%28212\%2C228\%2C239\%2C1\%29\%20100\%25\%29\%3B\%20/*\%20FF3\.6+\%20*/'
+
+
+.mix-bg-gradient-1 {
+  // Old Browsers
+  background: rgba(134,174,204,1);
+
+  // FF3.6+
+  background: -moz-linear-gradient(top, rgba(134,174,204,1) 0%, rgba(212,228,239,1) 100%);
+
+  // Chrome, Safari4+
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(134,174,204,1)), color-stop(100%, rgba(212,228,239,1)));
+
+  // Chrome10+,Safari5.1+
+  background: -webkit-linear-gradient(top, rgba(134,174,204,1) 0%, rgba(212,228,239,1) 100%);
+
+  // Opera 11.10+
+  background: -o-linear-gradient(top, rgba(134,174,204,1) 0%, rgba(212,228,239,1) 100%);
+
+  // IE 10+
+  background: -ms-linear-gradient(top, rgba(134,174,204,1) 0%, rgba(212,228,239,1) 100%);
+
+  // W3C
+  background: linear-gradient(to bottom, rgba(134,174,204,1) 0%, rgba(212,228,239,1) 100%);
+
+  // IE6-9
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#86aecc', endColorstr='#d4e4ef', GradientType=0 );
+}
+
+.mix-bg-gradient-2 {
+  background: rgba(205,221,234,1);
+  background: -moz-linear-gradient(top, rgba(205,221,234,1) 0%, rgba(255,255,255,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(205,221,234,1)), color-stop(100%, rgba(255,255,255,1)));
+  background: -webkit-linear-gradient(top, rgba(205,221,234,1) 0%, rgba(255,255,255,1) 100%);
+  background: -o-linear-gradient(top, rgba(205,221,234,1) 0%, rgba(255,255,255,1) 100%);
+  background: -ms-linear-gradient(top, rgba(205,221,234,1) 0%, rgba(255,255,255,1) 100%);
+  background: linear-gradient(to bottom, rgba(205,221,234,1) 0%, rgba(255,255,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdddea', endColorstr='#ffffff', GradientType=0 );
+}
+
+.mix-bg-gradient-3 {
+  background: rgba(226,236,243,1);
+  background: -moz-linear-gradient(top, rgba(226,236,243,1) 0%, rgba(255,255,255,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(226,236,243,1)), color-stop(100%, rgba(255,255,255,1)));
+  background: -webkit-linear-gradient(top, rgba(226,236,243,1) 0%, rgba(255,255,255,1) 100%);
+  background: -o-linear-gradient(top, rgba(226,236,243,1) 0%, rgba(255,255,255,1) 100%);
+  background: -ms-linear-gradient(top, rgba(226,236,243,1) 0%, rgba(255,255,255,1) 100%);
+  background: linear-gradient(to bottom, rgba(226,236,243,1) 0%, rgba(255,255,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2ecf3', endColorstr='#ffffff', GradientType=0 );
+}
 
 
 

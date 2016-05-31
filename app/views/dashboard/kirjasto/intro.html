@@ -34,10 +34,20 @@
     <!--Kirjasto-kojelauta-->
   </h1>
 
+  <h2 class="heading-large">
+    <a href="/dashboard/kirjasto/lukijaprofiili">1A. Lukijaprofiili</a>
+  </h2>
+
+  <p class="lede">
+    Esittelyteksti osiolle.
+  </p>
+
+
 
   <ul class="list list-bullet">
     {% include "includes/navigation-kirjasto.html" %}
   </ul>
+
 
 
   <div class="column-one-half  mydata-section" style="margin-top: 50px;">
@@ -50,151 +60,120 @@
       A 24px lead paragraph, maecenas sed diam.
     </p> -->
 
-
-    <div class="timeline">
-      <h2>2013</h2>
-
-      <ul>
-        <li>
-          <div class="grid-row">
-            <div class="column-one-third">
-              <img src="/public/images/books/799191-book-cover.jpg" alt="Book cover image" />
-            </div>
-            <div class="column-two-thirds">
-              <h3 class="heading-small"><a href="/dashboard/kirjasto/book">The One-Minute Organizer Plain &amp; Simple: 500 Tips for Getting Your Life in Order</a></h3>
-              <time>August 2013</time>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="grid-row">
-            <div class="column-one-third">
-              <img src="/public/images/books/Auster-Paul-New-York-trilogia.jpg" alt="Book cover image" />
-            </div>
-            <div class="column-two-thirds">
-              <h3 class="heading-small"><a href="http://www.kirjasampo.fi/fi/kulsa/saha3%253Au3c7d63bd-97e2-40b6-9ae1-555efc05c1b2">New York-trilogia</a></h3>
-              <time>July 2013</time>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="grid-row">
-            <div class="column-one-third">
-              <img src="/public/images/books/22320-William-Gibson-Pattern-recognition.jpg" alt="Book cover image" />
-            </div>
-            <div class="column-two-thirds">
-              <h3 class="heading-small"><a href="#">Pattern recognition</a></h3>
-              <time>July 2013</time>
-            </div>
-          </div>
-        </li>
-      </ul>
-
-      <h2>2012</h2>
-      <ul>
-        <li>
-          <div class="grid-row">
-            <div class="column-one-third">
-              <img src="/public/images/books/24019187-humans-of-new-york.jpg" alt="Book cover image" />
-            </div>
-            <div class="column-two-thirds">
-              <h3 class="heading-small"><a href="#">Humans of New York: Stories</a></h3>
-              <time>July 2013</time>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="grid-row">
-            <div class="column-one-third">
-              <img src="/public/images/books/7546430-neuromancer.jpg" alt="Book cover image" />
-            </div>
-            <div class="column-two-thirds">
-              <h3 class="heading-small"><a href="#">Neuromancer</a></h3>
-              <time>July 2013</time>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="grid-row">
-            <div class="column-one-third">
-              <img src="/public/images/books/313998-Johnny_Mnemonic.jpg" alt="Book cover image" />
-            </div>
-            <div class="column-two-thirds">
-              <h3 class="heading-small"><a href="#">Johnny Mnemonic</a></h3>
-              <time>July 2013</time>
-            </div>
-          </div>
-        </li>
-      </ul>
-
-      <h2>2011</h2>
-      <ul>
-        <li>
-          <div class="grid-row">
-            <div class="column-one-third">
-              <img src="/public/images/books/24693032-the-dogist.jpg" alt="Book cover image" />
-            </div>
-            <div class="column-two-thirds">
-              <h3 class="heading-small"><a href="#">The Dogist: Photographic Encounters with 1,000 Dogs</a></h3>
-              <time>July 2013</time>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="grid-row">
-            <div class="column-one-third">
-              <img src="/public/images/books/8576760-creative-inc.jpg" alt="Book cover image" />
-            </div>
-            <div class="column-two-thirds">
-              <h3 class="heading-small"><a href="#">Creative, Inc.: The Ultimate Guide to Running a Successful Freelance Business</a></h3>
-              <time>July 2013</time>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="grid-row">
-            <div class="column-one-third">
-              <img src="/public/images/books/13593553-to-sell-is-human.jpg" alt="Book cover image" />
-            </div>
-            <div class="column-two-thirds">
-              <h3 class="heading-small"><a href="#">To Sell Is Human: The Surprising Truth About Moving Others</a></h3>
-              <time>July 2013</time>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
+    {% include "includes/kirjasto-timeline.html" %}
 
   </div>
   <!-- .mydata-section ends -->
 
 
   <div class="column-one-half  mydata-section" style="margin-top: 50px;">
-    <h2 class="heading-large">
-      <a href="/dashboard/kirjasto/lukijaprofiili">1A. Lukijaprofiili</a>
-    </h2>
 
-    <p class="lede">
-      Esittelyteksti osiolle.
-    </p>
+    <h3 class="heading-medium">
+      Profiili
+    </h3>
+    <div class="mydata-subsection">
+      <h4 class="heading-small">Aihepiirit</h3>
 
-    <div class="grid-row">
+      <ul class="list list-bullet">
+        <li>
+          <a class="bookPageGenreLink" href="/dashboard/kirjasto/genres/non-fiction">Nonfiction</a>
+        </li>
+        <li>
+          <a class="bookPageGenreLink" href="/dashboard/kirjasto/genres/self-help">Self Help</a>
+        </li>
+        <li>
+          <a class="bookPageGenreLink" href="/dashboard/kirjasto/genres/psychology">Psychology</a>
+        </li>
+        <li>
+          <a class="bookPageGenreLink" href="/dashboard/kirjasto/genres/how-to">How To</a>
+        </li>
+      </ul>
+    </div>
 
-      <div class="column-one-half">
-        <h3 class="heading-medium">
-          Profiili
-        </h3>
-        <h4 class="heading-small">Aihepiirit</h3>
-        <h4 class="heading-small">Tilastot</h3>
-        <h4 class="heading-small">Kirjailijat</h3>
-      </div>
+    <div class="mydata-subsection">
+      <h4 class="heading-small">Tilastot</h3>
 
-      <div class="column-one-half">
-        <h3 class="heading-medium">
-          Suositukset
-        </h3>
-        <p>1B. Profiilin pohjalta tehdyt suositukset</p>
-      </div>
+      <ul class="list list-bullet">
+        <li>
+          <a class="bookPageGenreLink" href="#">Tilastosivu 1</a>
+        </li>
+        <li>
+          <a class="bookPageGenreLink" href="#">Tilastosivu 2</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="mydata-subsection">
+      <h4 class="heading-small">Kirjailijat</h3>
+      <ul class="list list-bullet">
+        <li>
+          <a class="bookPageGenreLink" href="#">William Gibson</a>
+        </li>
+        <li>
+          <a class="bookPageGenreLink" href="#">Donna Smallin Kuper</a>
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="mydata-subsection">
+      <h3 class="heading-medium">Suositukset</h3>
+      <p>1B. Profiilin pohjalta tehdyt suositukset</p>
+    </div>
+
+
+    <div class="form-group">
+      <fieldset class="inline">
+
+        <legend class="visuallyhidden">
+          Where should we send your new passport?
+        </legend>
+
+        <label class="block-label" for="radio-home-address" data-target="example-tilastot">
+          <input id="radio-home-address" type="radio" name="radio-indent-group" value="Yes" aria-controls="example-tilastot" aria-expanded="true">
+          Tilastot
+        </label>
+
+        <label class="block-label selected" for="radio-other-address" data-target="example-kirjailjat">
+          <input id="radio-other-address" type="radio" name="radio-indent-group" value="No" aria-controls="example-kirjailijat" aria-expanded="true">
+          Kirjailijat
+        </label>
+
+        <div class="panel panel-border-narrow" id="example-kirjailjat" aria-hidden="false">
+
+          <h2 class="heading-medium">
+            Kirjailijat
+          </h2>
+
+          <h4 class="heading-small">Kirjailijat</h3>
+          <ul class="list list-bullet">
+            <li>
+              <a class="bookPageGenreLink" href="#">William Gibson</a>
+            </li>
+            <li>
+              <a class="bookPageGenreLink" href="#">Donna Smallin Kuper</a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="panel panel-border-narrow" id="example-tilastot" aria-hidden="false">
+
+          <h2 class="heading-medium">
+            Tilastot
+          </h2>
+
+          <ul class="list list-bullet">
+            <li>
+              <a class="bookPageGenreLink" href="#">Tilastosivu 1</a>
+            </li>
+            <li>
+              <a class="bookPageGenreLink" href="#">Tilastosivu 2</a>
+            </li>
+          </ul>
+        </div>
+      </fieldset>
+
 
     </div>
     <!-- .grid-row ends -->
@@ -203,9 +182,11 @@
 
 
 
-  <div class="mydata-section">
 
-    <h2 class="heading-large">
+<!--
+  <div class="column-one-half  mydata-section">
+
+    <h2 class="heading-medium">
       <a href="/dashboard/kirjasto/connect-services">Palvelujen linkittäminen</a>
     </h2>
 
@@ -214,10 +195,8 @@
     </p>
 
   </div>
+-->
   <!-- .mydata-section ends -->
-
-
-
 
 
 
