@@ -1,24 +1,34 @@
 # mydata-helsinki-prototype
 
-# Instructions for developers
+## Instructions for developers
 
-## Requirements
+### Install dependencies
 
-Node.js - version 4.x.x
-
-
-## Install dependencies
-
+- Install [Node.js][] version `v4.x.x` or `v6.4.0`
+  - [Installing Node.js with nvm](https://gist.github.com/d2s/372b5943bce17b964a79)
+- Open the project directory with terminal.
+- Install npm packages required by the project, by running the command:
 ```
 npm install
 ```
 
-## Run the kit
+## Start the prototype
+
+- Open the project directory with terminal.
+- Run command:
 ```
 npm start
 ```
+- Open web browser at address: http://localhost:3000/
 
 
+
+
+
+
+
+
+[Node.js]: https://nodejs.org/en/
 
 
 ------------------------
